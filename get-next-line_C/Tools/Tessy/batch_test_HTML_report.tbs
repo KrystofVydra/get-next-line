@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<batchtest>
+    <operations>
+        <operation key="generateBatchReport">
+            <options>
+                <option key="reportOutputDirectory" value="$(PROJECTROOT)\Tools\Tessy\report"/>
+                <option key="reportFileNamePattern" value="TESSY_OverviewReport"/>
+           		<option key="reportOutputFormat" value="html"/>
+            </options>
+            <arguments>
+                <argument name="OPT_SHOW_PIE_CHART" value="true"/>
+                <argument name="OPT_SHOW_TEST_OBJECT_LIST" value="true"/>
+                <argument name="OPT_SHOW_BAR_CHART" value="true"/>
+                <argument name="OPT_SHOW_COVERAGE_CHARTS" value="true"/>
+                <argument name="OPT_INCLUDE_REPORT_COMMENTS" value="true"/>
+            </arguments>
+        </operation>
+    </operations>
+    <elements>
+        <testcollection name="TestCollection"/>
+    </elements>
+</batchtest>

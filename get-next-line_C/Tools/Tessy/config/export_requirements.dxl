@@ -1,0 +1,20 @@
+Stream output = write("RS_SW_URLs.txt")
+
+void ModuleURL2txt(Folder f){
+	Item itemRef
+	for itemRef in f do {
+		if(type(itemRef)=="Folder"){
+			ModuleURL2txt(folder(itemRef))
+		}
+		if(type(itemRef)=="Formal"){
+			output << name(itemRef)"," getURL(itemRef) "\n"
+			//print  name(itemRef)"," getURL(itemRef) "\n"
+		}
+	}
+}
+
+{
+	ModuleURL2txt(current)
+	print "module URLs succesful exported to RS_SW_URLs.txt"
+	exit_
+}

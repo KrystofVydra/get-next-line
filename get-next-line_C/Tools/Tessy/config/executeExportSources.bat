@@ -1,0 +1,1 @@
+ ..\..\Tools\Tessy\config\exportSources.vbs  ../../Tools/Tessy/lists/DOC01710385-0012_GEN_ModulesList_P06831.xlsm

@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ET_SetupTool_CFG xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <ET_CFG_PATHS>
+    <et_gen.h path="T:\Projekte\VW\MEB\P07580_MEB_OCC\Appl\Source\Core0\BSW\EventTracer\gen\ET_gen.h" />
+    <tcb.c path="" />
+    <compile_opt.mk path="" />
+    <isr_user_func path="" />
+  </ET_CFG_PATHS>
+  <ET_CFG_INFO>
+    <version version="3.2.0" />
+    <max_event value="500" />
+  </ET_CFG_INFO>
+</ET_SetupTool_CFG>

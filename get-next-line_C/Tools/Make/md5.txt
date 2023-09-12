@@ -1,0 +1,6 @@
+e292baf12d10158cfeabf3ee86169e82 *makefile
+3512aa8fd579f1d4e9a36d2d79b50571 *info.mk
+933a19ceacca607ee17df3f6f90fb0e9 *intcfg.mk
+12bc8b360999c9e9f3e4cf1f81fc32bb *std_sw_trace.mk
+b8f8607c815bc40e72dee16e211f3d57 *toolchecks.mk
+1cc8cfc3c577210992b500d858bb5647 *utils.mk

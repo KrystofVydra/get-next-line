@@ -1,0 +1,1 @@
+echo ET_post_testscript.bat

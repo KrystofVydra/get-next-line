@@ -1,0 +1,73 @@
+-rem "SVN-Id: $$Id: project.p_s 5802 2012-09-07 12:37:15Z breusc01 $$"
+-rem "SVN-Url: $$HeadURL: http://debesvn001/kostal/lk_ae_internal/AEP/AEP2/SwEngineeringTools/11_EclipseTemplateProject/branches/Release%20Candidate%202.6/Tools/Qac/project.p_s $$"
+
+-rem "------------------------------------------------------------------"
+-rem "QAC Message Personality                                           "
+-rem "Attention: The last active rule set in this file dominates        "
+-rem "------------------------------------------------------------------"
+
+-rem "------------------------------------------------------------------"
+-rem " summ-  = keine Zusammenfassung der Fehler                        "
+-rem " one-   = nur Zeilen mit Fehlern ausgeben                         "
+-rem " up     = Pfad zum User Message File                              "
+-rem " usr    = Erweiterung des User Message Files                      "
+-rem " REF+   = zeige alle Informationen zum Fehler                     "
+-rem " l+     = Zeilennummer mit ausgeben                               "
+-rem " max 0  = kein Limit bei Warnungen                                "
+-rem " m+     = output of all messages                                  "
+-rem " st+    = zeige den hoechsten Warnlevel                           "
+-rem " hw-    = zeige keine unterdrueckten Fehler                       "
+-rem " hdr+   = unterdruecke alle Warnungen aus Headerdateien           "
+-rem "------------------------------------------------------------------"
+
+-summ-
+-one-
+-up ..\qac
+-usr .m2cm_lk
+-REF+
+-l+
+-max 0
+-m+
+-st+
+-hw-
+-hdr-
+
+-rem "-------------------------------------------------------------------------"
+-rem " QAC 7.2                                                                 "
+-rem " Definition of all rules including incl. MISRA-C 2004 aus QAC 7.2        "
+-rem "-------------------------------------------------------------------------"
+-rem " Following MISRA2004 rules are deactivated:                              "
+-rem " Code      Id  	Rule                                                   "
+-rem " 0288,0292 3.1	All usage of implementation-defined behaviour          "
+-rem "                  shall be documented                                    "
+-rem " 0635      6.4	Bit fields shall only be defined to be of type         "
+-rem "                  unsigned int or signed int.                            "
+-rem " 0750,0759 18.4   Unions shall not be used.                              "
+-rem " 0780,0781 5.6    No identifier in one name space should have the same   "
+-rem "                  spelling as an identifier in another name space, with  "
+-rem "                  the exception of structure and union member names      "
+-rem "-------------------------------------------------------------------------"
+
+-forgetall o
+-o 9,40-97,159-280,284-287,289-291,294-339,341-342,400-432,434-505,507-509
+-o 513-581,585-634,636-699,703-715,723-747,752-758,766-775,777-779,801-814,817-837
+-o 841-859,863-945,970,1001-1257,1260-1267,1269,1272-1276,1281,1302,1304
+-o 1312,1315-1317,1323,1325,1328,1330-1404,1411-1431,1433-1434,1441-1443,1460-1483
+-o 1503-1510,1513-1514,1520-1529,1690-1691,2001-2015,2019-2051,2205,2212,2214,2216
+-o 2462-3102,3104-3123,3132-3138,3141-3196,3200-3202,3208-3209,3212-3219,3221-3222,3224-3225,3229-3230
+-o 3234-3309,3311-3335,3337-3342,3344,3346-3360,3372-3377,3382-3389,3391-3415,3417-3431,3436-3440
+-o 3443,3447-3453,3458,3460-3461,3480,3601,3607,3610-3612,3614,3616
+-o 3620,3625-3629,3635-3673,3675-3685,3688-3689,3692-3881,3900-4116,4120-4131,4140-4151,4153-4608
+-o 4700,4810-4828,5013-5102,5118-5120,5122-6001
+-o 6112,6200-6205,6300,6400
+-o 6500,6502,6506,6509,6512,6514,6516-6517,6519
+-o 6550,6552,6556
+-o 6600-6602,6720
+-o 6100,6110,6120,6130
+-o 6170,6175,6180,6185,6190
+-o 6301
+-o 6310
+-o 6405
+-o 6559
+-o 6603
+-o 6605

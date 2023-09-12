@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<batchtest>
+    <operations>
+        <operation key="executeTest">
+            <options>
+                <option key="checkInterface" value="true"/>
+                <option key="generateDriver" value="true"/>
+                <option key="run" value="true"/>
+                <option key="createNewTestRun" value="false"/>
+                <option key="instrumentation" value="C12_TESTOBJECT"/>
+            </options>
+        </operation>
+        <operation key="generateBatchReport">
+            <options>
+                <option key="reportOutputDirectory" value="$(PROJECTROOT)\Tools\Tessy\report"/>
+            </options>
+            <arguments>
+                <argument name="OPT_SHOW_PIE_CHART" value="true"/>
+                <argument name="OPT_SHOW_TEST_OBJECT_LIST" value="true"/>
+                <argument name="OPT_SHOW_BAR_CHART" value="true"/>
+                <argument name="OPT_SHOW_COVERAGE_CHARTS" value="true"/>
+                <argument name="OPT_INCLUDE_REPORT_COMMENTS" value="true"/>
+            </arguments>
+        </operation>
+    </operations>
+    <elements>
+        <testcollection name="TestCollection"/>
+    </elements>
+</batchtest>

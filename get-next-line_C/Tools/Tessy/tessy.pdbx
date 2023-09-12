@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project
+    backup="$(PROJECTROOT)\Tools\Tessy\backup"
+    configuration="$(PROJECTROOT)\Tools\Tessy\config\default_configuration.xml"
+    database="$(PROJECTROOT)\Tools\Tessy"
+    defaultEnvironment="GNU GCC Eclipse CDT (Default)"
+    description="This is Tessy-batch Test Project"
+    enableSourceRoot="true"
+    sourceRoot="$(PROJECTROOT)\Source"
+    location="$(PROJECTROOT)\Tools\Tessy"
+    name="Tessy_project"
+    projectVersion="4"
+    tessyVersion="3.2.12"
+    isTemplate="false"/>

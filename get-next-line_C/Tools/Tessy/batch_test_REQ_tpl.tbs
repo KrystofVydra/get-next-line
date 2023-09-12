@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<batchtest>
+    <operations>
+        <operation key="generateExecutionCoverageReport">
+            <options>
+                <option key="reportOutputDirectory" value="$(PROJECTROOT)\Tools\Tessy\report"/>
+                <option key="reportFileNamePattern" value="TESSY_RequirementExecutionCoverageReport"/>
+                <option key="reportOutputFormat" value="pdf"/>
+            </options>
+            <arguments>
+                <argument name="OPT_SHOW_PIE_CHART" value="true"/>
+                <argument name="OPT_SHOW_REQUIREMENTS_LIST" value="true"/>
+                <argument name="OPT_SHOW_REQUIREMENT_DETAILS" value="false"/>
+                <argument name="OPT_SHOW_TEST_ITEM_LIST" value="true"/>
+                <argument name="OPT_HIDE_TESTCASE_LINKS" value="false"/>
+                <argument name="OPT_HIDE_REQUIREMENT_DETAILS" value="false"/>
+                <argument name="OPT_REQUIREMENT_ID_ONLY" value="false"/>
+            </arguments>
+            <requirements>
+                <requirement name="requirement"/>
+            </requirements>
+            <testmeans/>
+        </operation>
+    </operations>
+    <elements>
+        <testcollection name="TestCollection"/>
+    </elements>
+</batchtest>

@@ -1,0 +1,19 @@
+File: t:\Projekte\LK\EventTracer\ET_Trigger\dist\ET_Trigger.py
+Author: kraehe02
+Version: 00.00 --- TEST- Version(not released) ---
+Python: 2.7.13 (v2.7.13:a06454b1afa1, Dec 17 2016, 20:42:59) [MSC v.1500 32 bit (Intel)]
+time: 22.03.2018 15:52:00
+...parse config Input\ET_connect_config.xml
+    - version: 01.20
+    - workspace: c:\CI\workspace\AEP-Template\P00000_ITSW-CI_TEST\CI_Template\Tools\Integration\WinIdea\P07580_MEB_OCC.xjrf
+...start ET_connect Mode: DBG
+    ...hidden mode activated
+search for instances and disconnect
+    ...no active instance detected
+    ...existing winIDEA instance found at port:  5315
+connected to new winIDEA instance
+    ...config: <isystem.connect.CConnectionConfig; proxy of <Swig Object of type 'isys::CConnectionConfig *' at 0x02F41980> >
+    ...debug controller started
+    ...data controller started
+    ...modify ET_Trigger -> 0xAA
+...end.

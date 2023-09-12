@@ -1,0 +1,6 @@
+<?xml version="1.0" ?>
+<ET_ISYS_CFG xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+    <ET_ISYS_CFG_Info>
+        <workspace workspace="c:\CI\workspace\AEP-Template\P00000_ITSW-CI_TEST\CI_Template\Tools\Integration\WinIdea\P07580_MEB_OCC.xjrf"/>
+    </ET_ISYS_CFG_Info>
+</ET_ISYS_CFG>

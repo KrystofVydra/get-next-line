@@ -1,0 +1,5 @@
+../../Source/EventTracer/cfg/ET_cfg.c
+../../Source/EventTracer/core/ET.c
+../../Source/get_next_line.c
+../../Source/get_next_line_utils.c
+../../Source/main.c

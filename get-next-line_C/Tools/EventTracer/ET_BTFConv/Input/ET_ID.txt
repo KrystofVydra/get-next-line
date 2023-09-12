@@ -1,0 +1,78 @@
+#author: kraehe02
+#date. 25.09.15
+#
+# Copyright(c) 2015 Leopold Kostal GmbH & Co. KG. Content and presentation
+# are protected worldwide. Copying, issuing to other parties or any kind of use,
+# in whole or in part, is prohibited without prior permission. All rights -
+# including industrial property rights - are reserved.
+#
+
+/* Do not change or remove this comment ! generated task indexes */
+    C0_TASK_MIN 0
+    ET_EVT_C0_Task_0_ID 0
+    ET_EVT_C0_Task_1_ID 1
+    C0_TASK_MAX 1
+
+/* Do not change or remove this comment ! generated isr indexes */
+    C0_ISR_MIN 2
+    ET_EVT_C0_Interrupt_0_ID 2
+    ET_EVT_C0_Interrupt_1_ID 3
+    C0_ISR_MAX 3
+
+/* Do not change or remove this comment ! generated fct indexes */
+    C0_FCT_MIN 4
+    ET_EVT_C0_Runnable_0_ID 4
+    ET_EVT_C0_Runnable_1_ID 5
+    C0_FCT_MAX 5
+
+/* Do not change or remove this comment ! generated sig indexes */
+    C0_SIG_MIN 6
+    ET_EVT_C0_Signal_0_ID 6
+    C0_SIG_MAX 6
+
+/* Do not change or remove this comment ! generated duration indexes */
+    C0_DUR_MIN 7
+    ET_EVT_C0_Duration_0_ID 7
+    C0_DUR_MAX 7
+
+/* Do not change or remove this comment ! generated evt indexes */
+    C0_EVT_MIN 8
+    ET_EVT_C0_Event_0_ID 8
+    C0_EVT_MAX 8
+
+/* Do not change or remove this comment ! the end of generated first core indexes */
+
+
+
+
+/* Do not change or remove this comment ! generated task indexes */
+    C1_TASK_MIN 9
+    ET_EVT_C1_Task_1_ID 9
+    C1_TASK_MAX 9
+
+/* Do not change or remove this comment ! generated isr indexes */
+    C1_ISR_MIN 10
+    ET_EVT_C1_Interrupt_1_ID 10
+    C1_ISR_MAX 10
+
+/* Do not change or remove this comment ! generated fct indexes */
+    C1_FCT_MIN 11
+    ET_EVT_C1_Runnable_1_ID 11
+    C1_FCT_MAX 11
+
+/* Do not change or remove this comment ! generated sig indexes */
+    C1_SIG_MIN 12
+    ET_EVT_C1_Signal_1_ID 12
+    C1_SIG_MAX 12
+
+/* Do not change or remove this comment ! generated duration indexes */
+    C1_DUR_MIN 13
+    ET_EVT_C1_Duration_1_ID 13
+    C1_DUR_MAX 13
+
+/* Do not change or remove this comment ! generated evt indexes */
+    C1_EVT_MIN 14
+    ET_EVT_C1_Event_1_ID 14
+    C1_EVT_MAX 14
+
+/* Do not change or remove this comment ! the end of generated second core indexes */
