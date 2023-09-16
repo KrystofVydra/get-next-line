@@ -1,1 +1,0 @@
-java -jar Ev_Tr_SetupTool.jar

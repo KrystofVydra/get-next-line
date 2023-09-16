@@ -1,2 +1,0 @@
-T:\Projekte\VW\MEB\P07580_MEB_OCC\Appl\Source\Core0\BSW\EventTracer\gen\ET_gen.h
-T:\Projekte\VW\MEB\P07580_MEB_OCC\Appl\Source\Core0\BSW\EventTracer\core\ET.h

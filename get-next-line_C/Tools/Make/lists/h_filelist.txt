@@ -1,5 +1,0 @@
-../../Source/EventTracer/cfg/ET_cfg.h
-../../Source/EventTracer/cfg/ET_MemMap.h
-../../Source/EventTracer/core/ET.h
-../../Source/EventTracer/gen/ET_gen.h
-../../Source/get_next_line.h

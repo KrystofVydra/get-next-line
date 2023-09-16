@@ -1,9 +1,0 @@
-<?xml version="1.0" encoding="utf-8"?>
-<MyXMLSaveDataType xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
-  <URL_PH>doors://debedb001.de.kostal.int:36677/?version=2&amp;prodID=0&amp;urn=urn:telelogic::1-0000000000000000-M-0004aa25</URL_PH>
-  <XML_Req_Url>requirements\FBL.xml</XML_Req_Url>
-  <TESSY_NAME>FBL</TESSY_NAME>
-  <VIEW_NAME>_LKRequTest</VIEW_NAME>
-  <XML_JUnit_Url>JUnit.xml</XML_JUnit_Url>
-  <BASELINE_NAME>BASELINE_VIEW_NAME</BASELINE_NAME>
-</MyXMLSaveDataType>
