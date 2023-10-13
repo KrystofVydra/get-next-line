@@ -15,8 +15,8 @@
 int main (void){
 
 	   int fd;
-	   char buffer[10];
-	   char *buff = &buffer[0];
+	   //char buffer[10];
+	   //char *buff = &buffer[0];
 	   char path[] = "file2.txt";
 
 	   fd = open(path, O_RDONLY);
@@ -28,6 +28,7 @@ int main (void){
 	   for (i = 0; i < 50; i++){
 		   output = get_next_line(fd);
 		   printf("[%s]", output);
+		   free(output);
 	   }
 
 
