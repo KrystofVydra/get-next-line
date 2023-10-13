@@ -8,6 +8,8 @@
 #include "get_next_line.h"
 
 
+#define BUFFER_SIZE 1
+
 static char buffer[BUFFER_SIZE];
 
 
@@ -103,37 +105,6 @@ char *get_next_line(int fd){
 	}
 
 
-	// output = (char*)malloc((size + 1) * sizeof(char));
-	// if (!output || size == 0){
-	// 	errorState = 1;
-	// } 
-	// index = 0;
-	// if (!errorState)
-	// {
-	// 	while (index < size){
-	// 		*(output + index) = buffer[index];
-	// 		index++;
-	// 	}
-	// 	//*(output + index) = '\0';
-	// }
-
-
-
-	// index = 0;
-	// if (!errorState)
-	// {
-	// 	while (index < size){
-	// 		*(output + index) = buffer[index];
-	// 		index++;
-	// 	}
-	// 	*(output + index) = '\0';
-	// }
-
-	// if (errorState)
-	// {
-	// 	free(output);
-	// 	output = NULL;
-	// }
 
 	return (output2);
 }

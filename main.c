@@ -17,7 +17,7 @@ int main (void){
 	   int fd;
 	   char buffer[10];
 	   char *buff = &buffer[0];
-	   char path[] = "file.txt";
+	   char path[] = "file2.txt";
 
 	   fd = open(path, O_RDONLY);
 	   //read(fd, buff, 1024);
