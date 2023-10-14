@@ -1,113 +1,35 @@
-
-
-#include <stdlib.h>
-#include <unistd.h>
-#include <stdio.h>
-#include <string.h>
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   get_next_line.c                                    :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: kvydra <kvydra@student.42.fr>              +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2023/10/14 16:55:27 by kvydra            #+#    #+#             */
+/*   Updated: 2023/10/14 19:02:47 by kvydra           ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
 
 #include "get_next_line.h"
+#include <stdlib.h>
+#include <unistd.h>
 
+char	g_buffer[BUFFER_SIZE];
 
-#define BUFFER_SIZE 1
+char	*get_next_line(int fd)
+{
+	char			*output;
+	unsigned int	total_size;
+	unsigned int	index;
+	int				readrtval;
 
-static char buffer[BUFFER_SIZE];
-
-
-void *custom_realloc(void *ptr, unsigned int newSize, unsigned int oldSize) {
-    newSize = newSize * sizeof(char);
-	oldSize = oldSize * sizeof(char);
-	
-	if (newSize == 0) {
-		free(ptr);
-        return NULL;
-    }
-
-    if (ptr == NULL) {
-        return malloc(newSize);
-    }
-
-    if (newSize <= oldSize) {
-        return ptr;
-    }
-
-    void *newPtr = malloc(newSize);
-    if (newPtr == NULL) {
-        return NULL;
-    }
-
-    memcpy(newPtr, ptr, oldSize);
-
-    free(ptr);
-
-    return newPtr;
-}
-
-char *get_next_line(int fd){
-	//char *output;
-	char *output2 = NULL;
-	unsigned int size = 0;
-	unsigned int index = 0;
-	unsigned int errorState = 0;
-	int readRtVal = 0;
-	unsigned int copy = 0;
-	int done = 0;
-	unsigned int oldSize = 0;
-
-	while (done == 0 && errorState == 0)
-	{
-		while (size < BUFFER_SIZE && index < BUFFER_SIZE){
-			readRtVal = read(fd, &buffer[index], 1);
-			if (readRtVal == -1)
-			{
-				errorState = 1;
-				done = 1;
-				break;
-			}
-			if (readRtVal == 0 || buffer[index] == '\0')
-			{
-				if (oldSize == 0 && size == 0)
-					errorState = 1;
-				done = 1;
-				break;
-			}
-			if (buffer[index] == '\n' || buffer[index] == '\0')
-			{
-				size++;
-				done = 1;
-				break;
-			}
-			size++;
-			index++;
-		}
-
-		if (output2 == NULL)
-			output2 = (char*)malloc(size * sizeof(char));
-		else 
-			output2 = (char*)custom_realloc(output2, oldSize + size, oldSize);
-
-		index = 0;
-		while (index < size)
-		{
-			*(output2 + copy) = buffer[index];
-			copy++;
-			index++;
-		}
-		
-		oldSize = oldSize + size;
-		size = 0;
-		index = 0;
-	}
-
-	if (errorState)
-	{
-		free(output2);
+	output = NULL;
+	total_size = 0;
+	index = 0;
+	readrtval = 0;
+	output = main_reading(readrtval, index, &total_size, fd);
+	if (!output)
 		return (NULL);
-	}
-
-
-
-	return (output2);
+	output[total_size] = '\0';
+	return (output);
 }
-
-
-
