@@ -6,12 +6,16 @@
 /*   By: kvydra <kvydra@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/14 16:56:03 by kvydra            #+#    #+#             */
-/*   Updated: 2023/10/14 19:02:49 by kvydra           ###   ########.fr       */
+/*   Updated: 2023/12/27 10:53:00 by kvydra           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef GET_NEXT_LINE_H
 # define GET_NEXT_LINE_H
+
+# ifndef BUFFER_SIZE
+#  define BUFFER_SIZE 1
+# endif
 
 extern char	g_buffer[BUFFER_SIZE];
 
