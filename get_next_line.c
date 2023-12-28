@@ -6,7 +6,7 @@
 /*   By: kvydra <kvydra@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/14 16:55:27 by kvydra            #+#    #+#             */
-/*   Updated: 2023/12/27 13:58:43 by kvydra           ###   ########.fr       */
+/*   Updated: 2023/12/28 10:25:39 by kvydra           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 #include <stdlib.h>
 #include <unistd.h>
 
-char	g_buffer[BUFFER_SIZE]; //change to static!!!
+/* char	g_buffer[BUFFER_SIZE]; //change to static!!!*/
 
 char	*get_next_line(int fd)
 {

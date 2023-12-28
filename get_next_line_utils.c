@@ -6,7 +6,7 @@
 /*   By: kvydra <kvydra@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/14 16:57:05 by kvydra            #+#    #+#             */
-/*   Updated: 2023/10/14 19:03:02 by kvydra           ###   ########.fr       */
+/*   Updated: 2023/12/28 10:28:41 by kvydra           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -60,7 +60,8 @@ void	*custom_realloc(void *ptr, unsigned int newSize, unsigned int oldSize)
 char	*main_reading(int readrtval, int index, unsigned int *total_size,
 		int fd)
 {
-	char	*output;
+	char		*output;
+	static char	g_buffer[BUFFER_SIZE];
 
 	output = NULL;
 	while (1)
