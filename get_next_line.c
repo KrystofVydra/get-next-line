@@ -23,6 +23,9 @@ char	*get_next_line(int fd)
 	unsigned int	index;
 	int				readrtval;
 
+	//error checks !
+	if (BUFFER_SIZE <= 0 || fd < 0 || fd > 1024)
+		return (NULL);
 	output = NULL;
 	total_size = 0;
 	index = 0;
