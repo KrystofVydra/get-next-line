@@ -66,7 +66,8 @@ char	*main_reading(int readrtval, int index, unsigned int *total_size,
 	output = NULL;
 	while (1)
 	{
-		readrtval = read(fd, &g_buffer[index], 1);
+		//musis cist buffer size kterou zada uzivatel, takhle si porad cetl buffer size 1, buffer size se musi menit!
+		readrtval = read(fd, &g_buffer[index], BUFFER_SIZE);
 		if (readrtval <= 0)
 		{
 			if ((*total_size) == 0)

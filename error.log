@@ -1,0 +1,318 @@
+╔══════════════════════════════════════════════════════════════════════════════╗
+║                Welcome to Francinette, a 42 tester framework!                ║
+╚═══════════════════════╦══════════════════════════════╦═══════════════════════╝
+                        ║         get_next_line        ║
+                        ╚══════════════════════════════╝
+✔ Preparing framework
+✖ Executing: norminette
+get_next_line.h: OK!
+get_next_line_utils_bonus.c: OK!
+get_next_line.c: Error!
+Error: WRONG_SCOPE_COMMENT  (line:  26, col:   5):	Comment is invalid in this scope
+get_next_line_bonus.h: OK!
+get_next_line_utils.c: Error!
+Error: LINE_TOO_LONG        (line:  69, col:   9):	line too long
+Error: WRONG_SCOPE_COMMENT  (line:  69, col:   9):	Comment is invalid in this scope
+Error: LINE_TOO_LONG        (line:  69, col: 118):	line too long
+get_next_line_bonus.c: OK!
+
+ℹ Running tests: gnlTester (https://github.com/Tripouille/gnlTester)
+[Mandatory]
+[BUFFER_SIZE = 1]: 
+Invalid fd: 1.OK 2.OK 3.OK 
+files/empty: 1.OK 2.OK 
+files/nl: 1.OK 2.OK 
+files/41_no_nl: 1.OK 2.OK 
+files/41_with_nl: 1.OK 2.OK 3.OK 
+files/42_no_nl: 1.OK 2.OK 
+files/42_with_nl: 1.OK 2.OK 3.OK 
+files/43_no_nl: 1.OK 2.OK 
+files/43_with_nl: 1.OK 2.OK 3.OK 
+files/multiple_nlx5: 1.OK 2.OK 3.OK 4.OK 5.OK 6.OK 
+files/multiple_line_no_nl: 1.OK 2.OK 3.OK 4.OK 5.OK 6.OK 
+files/multiple_line_with_nl: 1.OK 2.OK 3.OK 4.OK 5.OK 6.OK 
+files/alternate_line_nl_no_nl: 1.OK 2.OK 3.OK 4.OK 5.OK 6.OK 7.OK 8.OK 9.OK 10.OK 
+files/alternate_line_nl_with_nl: 1.OK 2.OK 3.OK 4.OK 5.OK 6.OK 7.OK 8.OK 9.OK 10.OK 
+files/big_line_no_nl: 1.OK 2.OK 
+files/big_line_with_nl: 1.OK 2.OK 
+stdin: 1.OK 2.OK 3.OK 4.OK 5.OK 6.OK 7.OK 8.OK 9.OK 10.OK 
+
+[BUFFER_SIZE = 42]: 
+Invalid fd: 1.OK 2.OK 3.OK 
+files/empty: 1.OK 2.OK 
+files/nl: 1.OK 2.OK 
+files/41_no_nl: 1.KO 2.OK 
+files/41_with_nl: 1.KO ==8994== Invalid read of size 1
+==8994==    at 0x484FBD4: strcmp (in /usr/libexec/valgrind/vgpreload_memcheck-amd64-linux.so)
+==8994==    by 0x10AD7A: gnl(int, char const*) (gnl.cpp:24)
+==8994==    by 0x10D829: main (mandatory.cpp:50)
+==8994==  Address 0x0 is not stack'd, malloc'd or (recently) free'd
+==8994== 
+2.SIGSEGV
+files/42_no_nl: 1.KO 2.OK 
+files/42_with_nl: 1.KO 2.KO 3.OK 
+files/43_no_nl: 1.KO 2.OK 
+files/43_with_nl: 1.KO ==8998== Invalid read of size 1
+==8998==    at 0x484FBD4: strcmp (in /usr/libexec/valgrind/vgpreload_memcheck-amd64-linux.so)
+==8998==    by 0x10AD7A: gnl(int, char const*) (gnl.cpp:24)
+==8998==    by 0x10E3C8: main (mandatory.cpp:77)
+==8998==  Address 0x0 is not stack'd, malloc'd or (recently) free'd
+==8998== 
+2.SIGSEGV
+files/multiple_nlx5: 1.OK ==8999== Invalid read of size 1
+==8999==    at 0x484FBD4: strcmp (in /usr/libexec/valgrind/vgpreload_memcheck-amd64-linux.so)
+==8999==    by 0x10AD7A: gnl(int, char const*) (gnl.cpp:24)
+==8999==    by 0x10E6A8: main (mandatory.cpp:83)
+==8999==  Address 0x0 is not stack'd, malloc'd or (recently) free'd
+==8999== 
+2.SIGSEGV
+files/multiple_line_no_nl: 1.KO 2.KO ==9000== Invalid read of size 1
+==9000==    at 0x484FBD4: strcmp (in /usr/libexec/valgrind/vgpreload_memcheck-amd64-linux.so)
+==9000==    by 0x10AD7A: gnl(int, char const*) (gnl.cpp:24)
+==9000==    by 0x10E9C4: main (mandatory.cpp:92)
+==9000==  Address 0x0 is not stack'd, malloc'd or (recently) free'd
+==9000== 
+3.SIGSEGV
+files/multiple_line_with_nl: 1.KO ==9001== Invalid read of size 1
+==9001==    at 0x484FBD4: strcmp (in /usr/libexec/valgrind/vgpreload_memcheck-amd64-linux.so)
+==9001==    by 0x10AD7A: gnl(int, char const*) (gnl.cpp:24)
+==9001==    by 0x10ECC2: main (mandatory.cpp:101)
+==9001==  Address 0x0 is not stack'd, malloc'd or (recently) free'd
+==9001== 
+2.SIGSEGV
+files/alternate_line_nl_no_nl: 1.KO 2.KO ==9002== Invalid read of size 1
+==9002==    at 0x484FBD4: strcmp (in /usr/libexec/valgrind/vgpreload_memcheck-amd64-linux.so)
+==9002==    by 0x10AD7A: gnl(int, char const*) (gnl.cpp:24)
+==9002==    by 0x10EFDE: main (mandatory.cpp:110)
+==9002==  Address 0x0 is not stack'd, malloc'd or (recently) free'd
+==9002== 
+3.SIGSEGV
+files/alternate_line_nl_with_nl: 1.KO 2.KO ==9003== Invalid read of size 1
+==9003==    at 0x484FBD4: strcmp (in /usr/libexec/valgrind/vgpreload_memcheck-amd64-linux.so)
+==9003==    by 0x10AD7A: gnl(int, char const*) (gnl.cpp:24)
+==9003==    by 0x10F327: main (mandatory.cpp:123)
+==9003==  Address 0x0 is not stack'd, malloc'd or (recently) free'd
+==9003== 
+3.SIGSEGV
+files/big_line_no_nl: 1.KO 2.OK 
+files/big_line_with_nl: 1.KO 2.OK 
+stdin: 1.KO 2.KO ==9006== Invalid read of size 1
+==9006==    at 0x484FBD4: strcmp (in /usr/libexec/valgrind/vgpreload_memcheck-amd64-linux.so)
+==9006==    by 0x10AD7A: gnl(int, char const*) (gnl.cpp:24)
+==9006==    by 0x10FC0F: main (mandatory.cpp:145)
+==9006==  Address 0x0 is not stack'd, malloc'd or (recently) free'd
+==9006== 
+3.SIGSEGV
+
+[BUFFER_SIZE = 10000000]: 
+Invalid fd: 1.OK 2.OK 3.OK 
+files/empty: 1.OK 2.OK 
+files/nl: 1.OK 2.OK 
+files/41_no_nl: 1.KO 2.OK 
+files/41_with_nl: 1.KO ==9027== Invalid read of size 1
+==9027==    at 0x484FBD4: strcmp (in /usr/libexec/valgrind/vgpreload_memcheck-amd64-linux.so)
+==9027==    by 0x10AD7A: gnl(int, char const*) (gnl.cpp:24)
+==9027==    by 0x10D829: main (mandatory.cpp:50)
+==9027==  Address 0x0 is not stack'd, malloc'd or (recently) free'd
+==9027== 
+2.SIGSEGV
+files/42_no_nl: 1.KO 2.OK 
+files/42_with_nl: 1.KO ==9029== Invalid read of size 1
+==9029==    at 0x484FBD4: strcmp (in /usr/libexec/valgrind/vgpreload_memcheck-amd64-linux.so)
+==9029==    by 0x10AD7A: gnl(int, char const*) (gnl.cpp:24)
+==9029==    by 0x10DDDA: main (mandatory.cpp:61)
+==9029==  Address 0x0 is not stack'd, malloc'd or (recently) free'd
+==9029== 
+2.SIGSEGV
+files/43_no_nl: 1.KO 2.OK 
+files/43_with_nl: 1.KO ==9031== Invalid read of size 1
+==9031==    at 0x484FBD4: strcmp (in /usr/libexec/valgrind/vgpreload_memcheck-amd64-linux.so)
+==9031==    by 0x10AD7A: gnl(int, char const*) (gnl.cpp:24)
+==9031==    by 0x10E395: main (mandatory.cpp:77)
+==9031==  Address 0x0 is not stack'd, malloc'd or (recently) free'd
+==9031== 
+2.SIGSEGV
+files/multiple_nlx5: 1.OK ==9032== Invalid read of size 1
+==9032==    at 0x484FBD4: strcmp (in /usr/libexec/valgrind/vgpreload_memcheck-amd64-linux.so)
+==9032==    by 0x10AD7A: gnl(int, char const*) (gnl.cpp:24)
+==9032==    by 0x10E675: main (mandatory.cpp:83)
+==9032==  Address 0x0 is not stack'd, malloc'd or (recently) free'd
+==9032== 
+2.SIGSEGV
+files/multiple_line_no_nl: 1.KO ==9033== Invalid read of size 1
+==9033==    at 0x484FBD4: strcmp (in /usr/libexec/valgrind/vgpreload_memcheck-amd64-linux.so)
+==9033==    by 0x10AD7A: gnl(int, char const*) (gnl.cpp:24)
+==9033==    by 0x10E982: main (mandatory.cpp:92)
+==9033==  Address 0x0 is not stack'd, malloc'd or (recently) free'd
+==9033== 
+2.SIGSEGV
+files/multiple_line_with_nl: 1.KO ==9034== Invalid read of size 1
+==9034==    at 0x484FBD4: strcmp (in /usr/libexec/valgrind/vgpreload_memcheck-amd64-linux.so)
+==9034==    by 0x10AD7A: gnl(int, char const*) (gnl.cpp:24)
+==9034==    by 0x10EC8F: main (mandatory.cpp:101)
+==9034==  Address 0x0 is not stack'd, malloc'd or (recently) free'd
+==9034== 
+2.SIGSEGV
+files/alternate_line_nl_no_nl: 1.KO ==9035== Invalid read of size 1
+==9035==    at 0x484FBD4: strcmp (in /usr/libexec/valgrind/vgpreload_memcheck-amd64-linux.so)
+==9035==    by 0x10AD7A: gnl(int, char const*) (gnl.cpp:24)
+==9035==    by 0x10EF9C: main (mandatory.cpp:110)
+==9035==  Address 0x0 is not stack'd, malloc'd or (recently) free'd
+==9035== 
+2.SIGSEGV
+files/alternate_line_nl_with_nl: 1.KO ==9036== Invalid read of size 1
+==9036==    at 0x484FBD4: strcmp (in /usr/libexec/valgrind/vgpreload_memcheck-amd64-linux.so)
+==9036==    by 0x10AD7A: gnl(int, char const*) (gnl.cpp:24)
+==9036==    by 0x10F2E5: main (mandatory.cpp:123)
+==9036==  Address 0x0 is not stack'd, malloc'd or (recently) free'd
+==9036== 
+2.SIGSEGV
+files/big_line_no_nl: 1.KO 2.OK 
+files/big_line_with_nl: 1.KO 2.OK 
+stdin: 1.KO ==9039== Invalid read of size 1
+==9039==    at 0x484FBD4: strcmp (in /usr/libexec/valgrind/vgpreload_memcheck-amd64-linux.so)
+==9039==    by 0x10AD7A: gnl(int, char const*) (gnl.cpp:24)
+==9039==    by 0x10FBCE: main (mandatory.cpp:145)
+==9039==  Address 0x0 is not stack'd, malloc'd or (recently) free'd
+==9039== 
+2.SIGSEGV
+
+[Static = 1]
+[Bonus]
+[BUFFER_SIZE = 1]: 
+Invalid fd: 1.OK 2.OK 3.OK 
+files/empty: 1.OK 2.OK 
+files/nl: 1.OK 2.OK 
+files/41_no_nl: 1.OK 2.OK 
+files/41_with_nl: 1.OK 2.OK 3.OK 
+files/42_no_nl: 1.OK 2.OK 
+files/42_with_nl: 1.OK 2.OK 3.OK 
+files/43_no_nl: 1.OK 2.OK 
+files/43_with_nl: 1.OK 2.OK 3.OK 
+files/multiple_nlx5: 1.OK 2.OK 3.OK 4.OK 5.OK 6.OK 
+files/multiple_line_no_nl: 1.OK 2.OK 3.OK 4.OK 5.OK 6.OK 
+files/multiple_line_with_nl: 1.OK 2.OK 3.OK 4.OK 5.OK 6.OK 
+files/alternate_line_nl_no_nl: 1.OK 2.OK 3.OK 4.OK 5.OK 6.OK 7.OK 8.OK 9.OK 10.OK 
+files/alternate_line_nl_with_nl: 1.OK 2.OK 3.OK 4.OK 5.OK 6.OK 7.OK 8.OK 9.OK 10.OK 
+files/big_line_no_nl: 1.OK 2.OK 
+files/big_line_with_nl: 1.OK 2.OK 
+stdin: 1.OK 2.OK 3.OK 4.OK 5.OK 6.OK 7.OK 8.OK 9.OK 10.OK 
+
+[BUFFER_SIZE = 42]: 
+Invalid fd: 1.OK 2.OK 3.OK 
+files/empty: 1.OK 2.OK 
+files/nl: 1.OK 2.OK 
+files/41_no_nl: 1.OK 2.OK 
+files/41_with_nl: 1.OK 2.OK 3.OK 
+files/42_no_nl: 1.OK 2.OK 
+files/42_with_nl: 1.OK 2.OK 3.OK 
+files/43_no_nl: 1.OK 2.OK 
+files/43_with_nl: 1.OK 2.OK 3.OK 
+files/multiple_nlx5: 1.OK 2.OK 3.OK 4.OK 5.OK 6.OK 
+files/multiple_line_no_nl: 1.OK 2.OK 3.OK 4.OK 5.OK 6.OK 
+files/multiple_line_with_nl: 1.OK 2.OK 3.OK 4.OK 5.OK 6.OK 
+files/alternate_line_nl_no_nl: 1.OK 2.OK 3.OK 4.OK 5.OK 6.OK 7.OK 8.OK 9.OK 10.OK 
+files/alternate_line_nl_with_nl: 1.OK 2.OK 3.OK 4.OK 5.OK 6.OK 7.OK 8.OK 9.OK 10.OK 
+files/big_line_no_nl: 1.OK 2.OK 
+files/big_line_with_nl: 1.OK 2.OK 
+stdin: 1.OK 2.OK 3.OK 4.OK 5.OK 6.OK 7.OK 8.OK 9.OK 10.OK 
+
+[BUFFER_SIZE = 10000000]: 
+Invalid fd: 1.OK 2.OK 3.OK 
+files/empty: 1.OK 2.OK 
+files/nl: 1.OK 2.OK 
+files/41_no_nl: 1.OK 2.OK 
+files/41_with_nl: 1.OK 2.OK 3.OK 
+files/42_no_nl: 1.OK 2.OK 
+files/42_with_nl: 1.OK 2.OK 3.OK 
+files/43_no_nl: 1.OK 2.OK 
+files/43_with_nl: 1.OK 2.OK 3.OK 
+files/multiple_nlx5: 1.OK 2.OK 3.OK 4.OK 5.OK 6.OK 
+files/multiple_line_no_nl: 1.OK 2.OK 3.OK 4.OK 5.OK 6.OK 
+files/multiple_line_with_nl: 1.OK 2.OK 3.OK 4.OK 5.OK 6.OK 
+files/alternate_line_nl_no_nl: 1.OK 2.OK 3.OK 4.OK 5.OK 6.OK 7.OK 8.OK 9.OK 10.OK 
+files/alternate_line_nl_with_nl: 1.OK 2.OK 3.OK 4.OK 5.OK 6.OK 7.OK 8.OK 9.OK 10.OK 
+files/big_line_no_nl: 1.OK 2.OK 
+files/big_line_with_nl: 1.OK 2.OK 
+stdin: 1.OK 2.OK 3.OK 4.OK 5.OK 6.OK 7.OK 8.OK 9.OK 10.OK 
+
+[BUFFER_SIZE = 1]: 
+multiple fd: 1.OK 2.OK 3.OK 4.OK 5.OK 6.OK 7.OK 8.OK 9.OK 10.OK 11.OK 12.OK 13.OK 14.OK 15.OK 16.OK 17.OK 18.OK 19.OK 
+[BUFFER_SIZE = 42]: 
+multiple fd: 1.OK 2.OK 3.OK 4.OK 5.OK 6.OK 7.OK 8.OK 9.OK 10.OK 11.OK 12.OK 13.OK 14.OK 15.OK 16.OK 17.OK 18.OK 19.OK 
+[BUFFER_SIZE = 10000000]: 
+multiple fd: 1.OK 2.OK 3.OK 4.OK 5.OK 6.OK 7.OK 8.OK 9.OK 10.OK 11.OK 12.OK 13.OK 14.OK 15.OK 16.OK 17.OK 18.OK 19.OK 
+
+To see the tests open: /home/vsinagl/francinette/tests/get_next_line/gnlTester/tests/mandatory.cpp
+
+ℹ Running tests: fsoares (my own tests)
+BUFFER_SIZE: 1
+Invalid fd          : 1.OK 2.OK 3.OK 4_LEAKS.OK 
+empty.txt           : 1.OK 2.OK 3_LEAKS.OK 
+1char.txt           : 1.OK 2.OK 3_LEAKS.OK 
+one_line_no_nl.txt  : 1.OK 2.OK 3_LEAKS.OK 
+only_nl.txt         : 1.OK 2.OK 3_LEAKS.OK 
+multiple_nl.txt     : 1.OK 2.OK 3.OK 4.OK 5.OK 6.OK 7_LEAKS.OK 
+variable_nls.txt    : 1.OK 2.OK 3.OK 4.OK 5.OK 6.OK 7.OK 8.OK 9.OK 10.OK 11.OK 12.OK 13.OK 14_LEAKS.OK 
+lines_around_10.txt : 1.OK 2.OK 3.OK 4.OK 5.OK 6.OK 7_LEAKS.OK 
+read_error.txt      : 1.OK 2.OK 3.OK 4.OK 5.OK 6.OK 7.OK 8.OK 9_LEAKS.OK 
+stdin               : 1.OK 2.OK 3.OK 4.OK 5.OK 6.OK 7_LEAKS.OK 
+
+BUFFER_SIZE: 10
+Invalid fd          : 1.OK 2.OK 3.OK 4_LEAKS.OK 
+empty.txt           : 1.OK 2.OK 3_LEAKS.OK 
+1char.txt           : 1.OK 2.OK 3_LEAKS.OK 
+one_line_no_nl.txt  : 1.KO 2.OK 3_LEAKS.KO 
+Segmentation fault (core dumped)
+make: [Makefile:24: mandatory] Error 139 (ignored)
+BUFFER_SIZE: 1000000
+Invalid fd          : 1.OK 2.OK 3.OK 4_LEAKS.OK 
+empty.txt           : 1.OK 2.OK 3_LEAKS.OK 
+1char.txt           : 1.OK 2.OK 3_LEAKS.OK 
+one_line_no_nl.txt  : 1.KO 2.OK 3_LEAKS.KO 
+Segmentation fault (core dumped)
+make: [Makefile:25: mandatory] Error 139 (ignored)
+BONUS!
+BUFFER_SIZE: 1
+Invalid fd          : 1.OK 2.OK 3.OK 4_LEAKS.OK 
+empty.txt           : 1.OK 2.OK 3_LEAKS.OK 
+1char.txt           : 1.OK 2.OK 3_LEAKS.OK 
+one_line_no_nl.txt  : 1.OK 2.OK 3_LEAKS.OK 
+only_nl.txt         : 1.OK 2.OK 3_LEAKS.OK 
+multiple_nl.txt     : 1.OK 2.OK 3.OK 4.OK 5.OK 6.OK 7_LEAKS.OK 
+variable_nls.txt    : 1.OK 2.OK 3.OK 4.OK 5.OK 6.OK 7.OK 8.OK 9.OK 10.OK 11.OK 12.OK 13.OK 14_LEAKS.OK 
+lines_around_10.txt : 1.OK 2.OK 3.OK 4.OK 5.OK 6.OK 7_LEAKS.OK 
+read_error.txt      : 1.OK 2.OK 3.OK 4.OK 5.OK 6.OK 7.OK 8.OK 9_LEAKS.OK 
+stdin               : 1.OK 2.OK 3.OK 4.OK 5.OK 6.OK 7_LEAKS.OK 
+
+BUFFER_SIZE: 10
+Invalid fd          : Use the BUFFER_SIZE (10) on the read calls, instead of what you wanted to read (1).
+Segmentation fault (core dumped)
+make: [Makefile:30: bonus] Error 139 (ignored)
+BUFFER_SIZE: 1000000
+Invalid fd          : Use the BUFFER_SIZE (1000000) on the read calls, instead of what you wanted to read (1).
+Segmentation fault (core dumped)
+make: [Makefile:31: bonus] Error 139 (ignored)
+BUFFER_SIZE: 1
+open, error, open   : 1.OK 2.OK 3.OK 4.OK 5.OK 6.OK 7.OK 8.OK 9.OK 10.OK 11.OK 12.OK 13.OK 14.OK 15_LEAKS.OK 
+2 file descriptors  : 1.OK 2.OK 3.OK 4.OK 5.OK 6.OK 7.OK 8.OK 9.OK 10.OK 11.OK 12.OK 13_LEAKS.OK 
+multiple fds        : 1.OK 2.OK 3.OK 4.OK 5.OK 6.OK 7.OK 8.OK 9.OK 10.OK 11.OK 12.OK 13.OK 14.OK 15.OK 16.OK 17.OK 18.OK 19.OK 20.OK 21.OK 22.OK 23_LEAKS.OK 
+
+BUFFER_SIZE: 10
+open, error, open   : Use the BUFFER_SIZE (10) on the read calls, instead of what you wanted to read (1).
+Segmentation fault (core dumped)
+make: [Makefile:33: bonus] Error 139 (ignored)
+BUFFER_SIZE: 1000000
+open, error, open   : Use the BUFFER_SIZE (1000000) on the read calls, instead of what you wanted to read (1).
+Segmentation fault (core dumped)
+make: [Makefile:34: bonus] Error 139 (ignored)
+Errors found:
+
+To see the tests open: /home/vsinagl/francinette/tests/get_next_line/fsoares/tester.c
+
+
+Summary: 
+
+Norminette Errors: get_next_line.c, get_next_line_utils.c
+
+Failed tests: gnlTester, fsoares
