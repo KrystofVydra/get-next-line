@@ -6,7 +6,7 @@
 /*   By: kvydra <kvydra@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/14 16:57:05 by kvydra            #+#    #+#             */
-/*   Updated: 2023/12/28 10:58:29 by kvydra           ###   ########.fr       */
+/*   Updated: 2024/01/01 16:18:20 by kvydra           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -79,7 +79,8 @@ char	*main_reading(int readrtval, int index, unsigned int *total_size,
 		if (!output)
 			return (NULL);
 		output[(*total_size) - 1] = g_buffer[index];
-		if (g_buffer[index] == '\n')
+		index++;
+		if (g_buffer[index - 1] == '\n')
 			break ;
 	}
 	return (output);
